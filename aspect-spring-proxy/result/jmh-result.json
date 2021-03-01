@@ -1,0 +1,61 @@
+[
+    {
+        "jmhVersion" : "1.27",
+        "benchmark" : "com.priceline.jmh.JMHApplication.microBenchmark",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/Users/biqian/.sdkman/candidates/java/15.0.2.j9-adpt/bin/java",
+        "jvmArgs" : [
+            "-server"
+        ],
+        "jdkVersion" : "15.0.2",
+        "vmName" : "Eclipse OpenJ9 VM",
+        "vmVersion" : "openj9-0.24.0",
+        "warmupIterations" : 5,
+        "warmupTime" : "10 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "10 s",
+        "measurementBatchSize" : 1,
+        "primaryMetric" : {
+            "score" : 453564.4820640442,
+            "scoreError" : 55248.292933283585,
+            "scoreConfidence" : [
+                398316.1891307606,
+                508812.7749973278
+            ],
+            "scorePercentiles" : {
+                "0.0" : 379856.4332280082,
+                "50.0" : 467886.3218428218,
+                "90.0" : 486732.51457842544,
+                "95.0" : 487347.7554306944,
+                "99.0" : 487347.7554306944,
+                "99.9" : 487347.7554306944,
+                "99.99" : 487347.7554306944,
+                "99.999" : 487347.7554306944,
+                "99.9999" : 487347.7554306944,
+                "100.0" : 487347.7554306944
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    481195.346908005,
+                    466647.4544764649,
+                    427592.4752763679,
+                    405095.9155694671,
+                    379856.4332280082,
+                    472739.0466172797,
+                    487347.7554306944,
+                    480740.53823653836,
+                    469125.18920917873,
+                    465304.66568843805
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+

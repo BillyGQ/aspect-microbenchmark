@@ -1,0 +1,70 @@
+biqian@CT1-8724A-M</comput ~/work/sources/references/aspect-microbenchmark $ java -jar aspect-spring-proxy/target/aspect-spring-proxy-1.0-SNAPSHOT.jar
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2021-03-01 13:50:21.591  WARN 80164 --- [           main] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5010 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2021-03-01 13:50:21.596  INFO 80164 --- [           main] com.priceline.jmh.JMHApplication         : Starting JMHApplication using Java 15.0.2 on CT1-8724A-M</comput with PID 80164 (/Users/biqian/work/sources/references/aspect-microbenchmark/aspect-spring-proxy/target/aspect-spring-proxy-1.0-SNAPSHOT.jar started by biqian in /Users/biqian/work/sources/references/aspect-microbenchmark)
+2021-03-01 13:50:21.596  INFO 80164 --- [           main] com.priceline.jmh.JMHApplication         : No active profile set, falling back to default profiles: default
+2021-03-01 13:50:22.216  INFO 80164 --- [           main] com.priceline.jmh.JMHApplication         : Started JMHApplication in 5.924 seconds (JVM running for 6.238)
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.openjdk.jmh.util.Utils (jar:file:/Users/biqian/work/sources/references/aspect-microbenchmark/aspect-spring-proxy/target/aspect-spring-proxy-1.0-SNAPSHOT.jar!/BOOT-INF/lib/jmh-core-1.27.jar!/) to field java.io.Console.cs
+WARNING: Please consider reporting this to the maintainers of org.openjdk.jmh.util.Utils
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+# JMH version: 1.27
+# VM version: JDK 15.0.2, Eclipse OpenJ9 VM, openj9-0.24.0
+# *** WARNING: This VM is not supported by JMH. The produced benchmark data can be completely wrong.
+# VM invoker: /Users/biqian/.sdkman/candidates/java/15.0.2.j9-adpt/bin/java
+# VM options: -server
+# JMH blackhole mode: full blackhole + dont-inline hint
+# Warmup: 5 iterations, 10 s each
+# Measurement: 10 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.priceline.jmh.JMHApplication.microBenchmark
+
+# Run progress: 0.00% complete, ETA 00:02:30
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 431777.576 ops/s
+# Warmup Iteration   2: 500853.992 ops/s
+# Warmup Iteration   3: 486859.720 ops/s
+# Warmup Iteration   4: 487750.581 ops/s
+# Warmup Iteration   5: 483014.840 ops/s
+Iteration   1: 481195.347 ops/s
+Iteration   2: 466647.454 ops/s
+Iteration   3: 427592.475 ops/s
+Iteration   4: 405095.916 ops/s
+Iteration   5: 379856.433 ops/s
+Iteration   6: 472739.047 ops/s
+Iteration   7: 487347.755 ops/s
+Iteration   8: 480740.538 ops/s
+Iteration   9: 469125.189 ops/s
+Iteration  10: 465304.666 ops/s
+
+Result "com.priceline.jmh.JMHApplication.microBenchmark":
+  453564.482 ±(99.9%) 55248.293 ops/s [Average]
+  (min, avg, max) = (379856.433, 453564.482, 487347.755), stdev = 36543.325
+  CI (99.9%): [398316.189, 508812.775] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:02:39
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                       Mode  Cnt       Score       Error  Units
+JMHApplication.microBenchmark  thrpt   10  453564.482 ± 55248.293  ops/s
+
+Benchmark result is saved to jmh-result.json
