@@ -5,10 +5,11 @@
 		<!--
 		<include within="org.springframework.boot..*" />
 		-->
+        <dump within="com.priceline..*" beforeandafter="true"/>
 	</weaver>
 
 	<aspects>
 		<aspect name="com.priceline.jmh.SomeAspect" />
-	</aspects>
+    </aspects>
 
 </aspectj>
